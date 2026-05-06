@@ -28,6 +28,7 @@
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
     --font-accent: 'Great Vibes', cursive;
+    --font-signature: 'Great Vibes', cursive;
 
     /* Spacing & Shadows */
     --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -345,12 +346,12 @@ img {
 /* =========================================
    3. Hero Section
    ========================================= */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
+/* .hero {
     position: relative;
+    display: flex;
+    min-height: 55vh;
+    align-items: stretch;
+    background-color: #f5f2ed;
     overflow: hidden;
 }
 
@@ -478,7 +479,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 
 /* =========================================
@@ -1241,6 +1242,158 @@ img {
     transition-delay: 0.8s;
 }
 
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 55vh;
+    align-items: stretch;
+    background-color: #f5f2ed;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+
+.hero-content {
+    flex: 1;
+    max-width: 45%;
+    padding-right: 2%;
+    padding-left: 5%;
+    position: relative;
+    z-index: 3;
+    align-self: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.logo-area {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.leaf-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.logo-area h1 {
+    font-family: var(--font-heading);
+    font-size: 5.5rem;
+    color: #012e31;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-area h2 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    color: var(--color-dark-gray);
+}
+
+.logo-area h2 span {
+    color: var(--color-gold);
+    margin: 0 10px;
+}
+
+.tagline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.small-leaf {
+    width: 20px;
+    margin: 0 15px;
+}
+
+.small-leaf.left {
+    transform: scaleX(-1);
+}
+
+.tagline h3 {
+    font-family: var(--font-signature);
+    font-size: 2.5rem;
+    color: var(--color-dark-gray);
+    font-weight: 400;
+}
+
+.hero-content p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #555;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary2 {
+    background-color: #012e31;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.btn-primary2:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary2 {
+    background: linear-gradient(to right, #d3a453, #fdf2b3, #b27a33);
+    color: #012e31;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.btn-secondary2:hover {
+    transform: translateY(-2px);
+}
+
+.hero-image-area {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 
 
 /* =========================================
@@ -1257,6 +1410,53 @@ img {
 
     .stats-wrapper {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        padding: 100px 5% 40px;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        align-self: auto;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .hero-image-area {
+        justify-content: center;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .hero-image-area img {
+        width: 100%;
+        max-height: none;
+    }
+
+    .logo-area h1 {
+        font-size: 4.25rem;
+    }
+
+    .logo-area h2 {
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+    }
+
+    .tagline h3 {
+        font-size: 2.1rem;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
     }
 
     .hero h1 {
@@ -1290,10 +1490,54 @@ img {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
+     .hero {
+        padding: 100px 4% 32px;
+    }
+
+    .logo-area h1 {
+        font-size: 3.4rem;
+        letter-spacing: 1px;
+    }
+
+    .logo-area h2 {
+        font-size: 0.95rem;
+        letter-spacing: 1.5px;
+    }
+
+    .tagline {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tagline h3 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image-area {
+        min-height: 350px;
+    }
+
+
     .nav-links a {
         margin: 10px 0;
     }
-
+/* 
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -1326,7 +1570,7 @@ img {
     .hero-masonry {
         height: 450px;
         margin-top: 40px;
-    }
+    } */
 
     .about-container {
         flex-direction: column;
@@ -1366,7 +1610,28 @@ img {
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
+      .logo-area h1 {
+        font-size: 2.7rem;
+    }
+
+    .logo-area h2 {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    .tagline h3 {
+        font-size: 1.5rem;
+    }
+
+    .small-leaf {
+        width: 16px;
+        margin: 0 8px;
+    }
+
+    .hero-image-area {
+        min-height: 280px;
+    }
+    /* .hero h1 {
         font-size: 2.5rem;
     }
 
@@ -1374,7 +1639,7 @@ img {
         flex-direction: column;
         width: 100%;
         gap: 15px;
-    }
+    } */
 
     .btn-primary,
     .btn-secondary {
@@ -1399,3 +1664,5 @@ img {
         width: 100%;
     }
 }
+
+
